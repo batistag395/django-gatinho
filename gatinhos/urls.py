@@ -26,4 +26,5 @@ urlpatterns = [
     path('delete/<int:id>', delete),
     path('update/<int:id>', update),
     path('admin/', admin.site.urls),
+    path('account/', include('django.contrib.auth.urls'))
 ]
