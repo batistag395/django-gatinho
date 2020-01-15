@@ -17,6 +17,11 @@
     </a>
     <a class="btn btn-outline-success" href="/" style="color:white;border-color:white;">Cadastro de Gatinhos</a>
     <a class="btn btn-sm btn-outline-secondary" href="/dono/cadastro" style="color:white;border-color:white;">Cadastro de Donos</a>
+    {% if user.is_authenticated %}
+    <a class="btn btn-primary" href="{% url 'logout' %}">Sair</a>
+{% else %}
+    <a class="btn btn-primary" href="{% url 'login' %}">Login</a>
+{% endif %}
   </nav>
     {% block body %}
     <section class="container">
